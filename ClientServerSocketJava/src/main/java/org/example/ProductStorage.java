@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ProductStorage {
@@ -14,21 +15,37 @@ public class ProductStorage {
         var result = new ArrayList<Product>();
 
         for (Product product: products) {
-
             if (product.name.contains(name)) {
-
                 result.add(product);
             }
         }
 
-        System.out.println(result);
-
-//        Product[] arr = new Product[result.size()];
         return result;
     }
 
-//    @Override
-//    public String toString() {
-//        return this.re + " + " + this.im + "i";
-//    }
+    public ArrayList<Product> filterByPrice(int price) {
+        var result = new ArrayList<Product>();
+
+        for (Product product: products) {
+            if (product.price < price) {
+                result.add(product);
+            }
+        }
+
+        return result;
+    }
+
+    public ArrayList<Product> filterByShelfLife(Date date) {
+        var result = new ArrayList<Product>();
+
+        for (Product product: products) {
+            if (date.before(product.shelfLife)) {
+                result.add(product);
+            }
+        }
+
+        return result;
+    }
+
+
 }

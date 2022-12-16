@@ -27,6 +27,18 @@ public class SocketClient {
                     System.out.println("Enter search (name):");
                     clientParameter = br.readLine();
                     outStream.writeObject(clientParameter);
+                } else if ("op2".equals(clientMessage)) {
+                    outStream.writeObject(clientMessage);
+
+                    System.out.println("Enter search (price):");
+                    clientParameter = br.readLine();
+                    outStream.writeObject(clientParameter);
+                } else if ("op3".equals(clientMessage)) {
+                    outStream.writeObject(clientMessage);
+
+                    System.out.println("Enter search (date):");
+                    clientParameter = br.readLine();
+                    outStream.writeObject(clientParameter);
                 }
 
                 outStream.flush();
