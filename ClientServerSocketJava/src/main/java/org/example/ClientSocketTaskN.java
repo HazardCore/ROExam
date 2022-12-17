@@ -2,9 +2,8 @@ package org.example;
 import java.net.*;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
 
-public class SocketClient {
+public class ClientSocketTaskN {
 
     public static void main(String[] args) throws Exception {
         System.out.println("Command and values :");

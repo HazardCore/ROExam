@@ -56,7 +56,7 @@ class ServerClientThread extends Thread {
     }
 }
 
-public class SocketServer {
+public class ServerSocketTaskN {
     public static void main(String[] args) {
 
         try {
